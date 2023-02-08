@@ -40,7 +40,7 @@ fun main() {
             }
 
             "2" -> {
-                println("O valor total para pagar é de $mValorPedido ")
+                println("O valor total para pagar é de R$$mValorPedido ")
                 print("Digite o valor pago:")
 
                 var mPago = readln()
@@ -51,7 +51,7 @@ fun main() {
 
                 println("===============================")
                 println("                               ")
-                println("Foi pago $mPago seu troco é de $mTroco ")
+                println("Foi pago R$$mPago seu troco é de R$$mTroco ")
                 println("                               ")
                 println("===============================")
 
@@ -61,7 +61,7 @@ fun main() {
             "3" -> {
                 println("===============================")
                 println("                               ")
-                println("O valor total do caixa é $mValorTotal ")
+                println("O valor total do caixa é R$$mValorTotal ")
                 println("                               ")
                 println("===============================")
             }
@@ -87,7 +87,7 @@ fun main() {
 
     println("===============================")
     println("                               ")
-    println("fim do dia total do caixa é $mValorTotal ")
+    println("fim do dia total do caixa é R$$mValorTotal ")
     println("                               ")
     println("===============================")
 }
