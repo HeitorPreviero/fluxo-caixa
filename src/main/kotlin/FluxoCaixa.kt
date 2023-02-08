@@ -1,7 +1,7 @@
 fun main() {
-    var mValorPedido = 0f
-    var mValorTotal = 0f
-    var mFinal = false
+    var valorPedido = 0f
+    var valorTotal = 0f
+    var encerrado = false
     do {
         println("========== caixa ==============")
         println("1 -> para realizar o pedido")
@@ -11,9 +11,9 @@ fun main() {
         println("===============================")
 
         print("Digite a opção:")
-        var mOpcao: String = readln()
+        var opcao: String = readln()
 
-        when (mOpcao) {
+        when (opcao) {
             "1" -> {
                 do {
                     println("===============================")
@@ -23,54 +23,54 @@ fun main() {
                     println("===============================")
 
                     print("Digite a opção:")
-                    var mOpcaoPedido: String = readln()
+                    var opcaoPedido: String = readln()
 
-                    when (mOpcaoPedido) {
-                        "1" -> mValorPedido += 3.50f
-                        "2" -> mValorPedido += 10.50f
-                        "3" -> mValorPedido += 5.50f
+                    when (opcaoPedido) {
+                        "1" -> valorPedido += 3.50f
+                        "2" -> valorPedido += 10.50f
+                        "3" -> valorPedido += 5.50f
                         else -> println("Opção invalida !!")
                     }
 
                     print("Deseja continuar o pedido? S/N :")
-                    val value = readln()
+                    val resposta = readln()
 
-                } while (value.uppercase() == "S")
+                } while (resposta.uppercase() == "S")
 
             }
 
             "2" -> {
-                println("O valor total para pagar é de R$$mValorPedido ")
+                println("O valor total para pagar é de R$$valorPedido ")
                 print("Digite o valor pago:")
 
-                var mPago = readln()
-                var mTroco = mPago.toFloat()
+                var pago = readLine()?.toFloat() ?: 0f
+                var troco = pago - valorPedido
 
-                mTroco -= mValorPedido
-                mValorTotal += mValorPedido
+                troco -= valorPedido
+                valorTotal += valorPedido
 
                 println("===============================")
                 println("                               ")
-                println("Foi pago R$$mPago seu troco é de R$$mTroco ")
+                println("Foi pago R$$pago seu troco é de R$$troco ")
                 println("                               ")
                 println("===============================")
 
-                mValorPedido = 0f
+                valorPedido = 0f
             }
 
             "3" -> {
                 println("===============================")
                 println("                               ")
-                println("O valor total do caixa é R$$mValorTotal ")
+                println("O valor total do caixa é R$$valorTotal ")
                 println("                               ")
                 println("===============================")
             }
 
             "4" -> {
                 print("Deseja realmente fechar o caixa? S/N :")
-                val value1 = readln()
+                val resposta = readln()
 
-                if (value1.uppercase() == "S") mFinal = true
+                if (resposta.uppercase() == "S") encerrado = true
             }
 
             else -> {
@@ -81,13 +81,11 @@ fun main() {
                 println("===============================")
             }
         }
-
-
-    } while (!mFinal)
+    } while (!encerrado)
 
     println("===============================")
     println("                               ")
-    println("fim do dia total do caixa é R$$mValorTotal ")
+    println("fim do dia total do caixa é R$$valorTotal ")
     println("                               ")
     println("===============================")
 }
