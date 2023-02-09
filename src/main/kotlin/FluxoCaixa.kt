@@ -46,7 +46,6 @@ fun main() {
                 var pago = readLine()?.toFloat() ?: 0f
                 var troco = pago - valorPedido
 
-                troco -= valorPedido
                 valorTotal += valorPedido
 
                 println("===============================")
