@@ -10,7 +10,7 @@
 
 ⭐ Esse é um projeto para demonstrar meu conhecimento técnico sobre Kotlin. Mais informações técnicas abaixo.
 
-🎥 Esse projeto e uma criação de fluxo de caixa feito com script de Kotlin e é executado pelo terminal de comando. 
+🎥 Esse projeto e uma criação de fluxo de caixa feito com Kotlin e é executado pelo terminal de comando. 
 
 </p>
 
